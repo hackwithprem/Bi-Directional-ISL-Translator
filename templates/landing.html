@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Language Translator Landing Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">    
+</head>
+<body>
+    <nav>
+    <div class="logo">SignSpeak</div>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <a href="#get-started" class="cta-button">Get Started</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Break Communication Barriers with Sign Language</h1>
+        <p>Transform sign language into text and speech in real-time. Connect, communicate, and bridge the gap with our AI-powered translation technology.</p>
+        <div class="hero-buttons">
+          <a href="#get-started" class="btn-primary">Try It Free</a>
+          <a href="#how-it-works" class="btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="video-placeholder">
+          <video autoplay muted loop playsinline controls>
+            <source src="{{ url_for('static', filename='video/demo.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <h2 class="section-title">Powerful Features</h2>
+    <p class="section-subtitle">Everything you need for seamless sign language translation</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🎥</div>
+        <h3>Real-Time Translation</h3>
+        <p>Instantly convert sign language gestures into text and speech with our advanced AI recognition system.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <h3>AI-Powered Accuracy</h3>
+        <p>Machine learning algorithms ensure precise recognition of sign language with 95%+ accuracy rate.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌍</div>
+        <h3>Multiple Languages</h3>
+        <p>Support for ASL, BSL, and other international sign language systems with continuous updates.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>Cross-Platform</h3>
+        <p>Access from any device - desktop, tablet, or mobile. Works seamlessly across all platforms.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Privacy First</h3>
+        <p>Your conversations are encrypted and private. We never store or share your personal data.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Lightning Fast</h3>
+        <p>Near-instant processing ensures smooth, natural conversations without frustrating delays.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works" id="how-it-works">
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-subtitle">Get started in three simple steps</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Enable Your Camera</h3>
+          <p>Grant camera permissions and position yourself in front of the webcam. Our system will automatically detect and calibrate for optimal recognition.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Start Signing</h3>
+          <p>Begin signing naturally. Our AI recognizes your gestures in real-time and processes them through our advanced neural network.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>See Results Instantly</h3>
+          <p>Watch as your signs are translated to text on screen and converted to speech. Share or save your conversations with ease.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" id="get-started">
+    <div class="cta-content">
+      <h2>Ready to Start Communicating?</h2>
+      <p>Join thousands of users who are breaking communication barriers every day with SignSpeak.</p>
+      <button class="btn-white">Start Translating Now</button>
+    </div>
+  </section>
+
+  <footer id="about">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#support">Support</a>
+      </div>
+      <p>&copy; 2025 SignSpeak. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="{{ url_for('static', filename='js/landing.js') }}"></script>
+</body>
+</html>

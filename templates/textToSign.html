@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Text to Sign Converter</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/textToSign.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1 class="project-top-left"></h1>
+  <div class="page-header">
+  <!-- <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo"> -->
+  <div class="title-block">
+    <h1 class="page-title">ISL Text or Speech to Sign</h1>
+  </div>
+</div>
+
+  <div class="main-flex">
+  <!-- LEFT: Input -->
+  <div class="input-section">
+    <h2>Enter Text or Speak</h2>
+    
+    <form id="convertForm">
+      <textarea id="textInput" placeholder="Enter text..." required></textarea>
+      <div class="controls">
+        <button type="submit">Convert</button>
+        <button type="button" id="micButton">🎤 Start Speech</button>
+      </div>
+
+    </form>
+
+    <p id="statusMsg"></p>
+  </div>
+
+  <!-- RIGHT: Output -->
+  <div class="output-section">
+    <div id="videoContainer"></div>
+    <button id="replayButton" style="display: none;">🔄 Replay</button>
+  </div>
+</div>
+
+
+  <script src="{{ url_for('static', filename='js/textToSign.js') }}"></script>
+</body>
+</html>

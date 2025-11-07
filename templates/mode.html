@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Mode - SignSpeak</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/mode.css') }}">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">SignSpeak</div>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </header>
+
+  <main class="mode-container">
+    <h2>Choose Conversion Mode</h2>
+    <div class="mode-cards">
+      <div class="mode-card purple" id="signToText">
+        <img src="{{ url_for('static', filename='images/sign-text.png') }}" alt="Sign to Text">
+        <p>SIGN - TEXT</p>
+      </div>
+
+      <div class="mode-card blue" id="textToSign">
+        <img src="{{ url_for('static', filename='images/text-sign.png') }}" alt="Text to Sign">
+        <p>TEXT - SIGN</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ✅ Load mode.js correctly -->
+  <script type="module" src="{{ url_for('static', filename='js/mode.js') }}"></script>
+</body>
+</html>

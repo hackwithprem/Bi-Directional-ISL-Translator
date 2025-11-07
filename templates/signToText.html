@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ISL Sign-to-Text</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/signToText.css') }}">
+</head>
+<body>
+  <div class="main-container">
+    <h1 class="title">ISL Sign-to-Text</h1>
+
+    <div class="content">
+      <!-- Camera Area -->
+      <div class="camera-section">
+        <video id="video" autoplay playsinline></video>
+        <canvas id="captureCanvas" width="640" height="480" style="display:none"></canvas>
+
+        <div class="controls">
+          <button id="startBtn">Start</button>
+          <button id="stopBtn">Stop</button>
+          <button id="clearBtn">Clear Text</button>
+        </div>
+
+        <p id="statusText" class="statusText"></p>
+      </div>
+
+      <!-- Text Output Area -->
+      <div class="output-section">
+        <h2>Detected Sentence:</h2>
+        <div id="sentenceBox" class="sentenceBox"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/signToText.js') }}"></script>
+</body>
+</html>
