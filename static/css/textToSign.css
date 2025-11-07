@@ -1,0 +1,149 @@
+body {
+  font-family: 'Inknut Antiqua', serif;
+  background: #0f172a;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: rgb(255, 255, 255);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #cccccc80;
+  text-align: center;
+}
+
+textarea {
+  width: 95%;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button#micButton {
+  background-color: #0062ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+button#micButton:hover {
+  background-color: #0044ff;
+}
+
+#replayButton {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+video {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.main-flex {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  font-family: "Inknut Antiqua", serif;
+  opacity: 0;
+  transform: translateZ(-80px);
+  animation: slideIn 0.8s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+.input-section,
+.output-section {
+  flex: 1 1 300px;
+  max-width: 500px;
+  background: #0ca0e4b7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #cccccc85;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 120px;
+  flex-wrap: wrap;
+  text-align: center;
+  opacity: 0;
+  transform: translateZ(-80px);
+  animation: slideIn 1.0s ease-out forwards;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+.page-title {
+  font-size: 26px;
+  margin: 0;
+  color: #0EA5E9;
+  text-align: center;
+}
+
+.project-top-left {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #215172;
+  font-family: 'Inknut Antiqua', serif;
+  z-index: 100;
+}
